@@ -32,7 +32,7 @@ gulp.task('cleanCss', function () {
 
 gulp.task('buildCss', ['cleanCss'], function () {
 
-    gulp.src('./src/css/*.less')
+    gulp.src('./src/less/*.less')
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(minifyCss())
@@ -65,7 +65,7 @@ gulp.task('watch', function () {
 
     gulp.watch('./src/*.html', ['buildHtml']);
     gulp.watch('./app/*.html').on('change', sync.reload);
-    gulp.watch('./src/css/*.less', ['buildCss']).on('change', sync.reload);
+    gulp.watch('./src/less/*.less', ['buildCss']).on('change', sync.reload);
     gulp.watch('./src/js/*.js', ['buildJs']).on('change', sync.reload);
 });
 
