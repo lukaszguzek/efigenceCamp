@@ -1,0 +1,33 @@
+header: fluid
+	- register, sign in, login with FB
+
+header: container
+	- company name
+	- menu
+	- search box
+section: video
+	- bgc video
+	- controls /- text
+
+section about
+	- blockquote
+	- section news
+section places:
+	- animations
+
+slider
+	- slider + expand image
+
+contact
+	- google maps bgc + contact form
+
+footer
+	- cookies
+	- social news
+
+
+font: Roboto
+
+BLOCKS: 
+-icon - padding do odstępu
+- lista obrazków 
