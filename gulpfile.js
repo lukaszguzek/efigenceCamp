@@ -8,6 +8,7 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     less = require('gulp-less'),
     sync = require('browser-sync').create(),
+    prefix = require('gulp-autoprefixer'),
     srcCss = './src/css/',
     srcJs = './src/js/',
     srcHtml = './src/*.html',
@@ -22,7 +23,8 @@ gulp.task('cleanHtml', function () {
 
 gulp.task('buildHtml', ['cleanHtml'], function () {
     return gulp.src(srcHtml)
-        .pipe(gulp.dest(targetHtml));
+        .pipe(gulp.dest(targetHtml))
+        .pipe(sync.stream())
 })
 
 gulp.task('cleanCss', function () {
@@ -30,28 +32,32 @@ gulp.task('cleanCss', function () {
             .pipe(clean());
 })
 
-gulp.task('buildCss', ['cleanCss'], function () {
 
-    gulp.src('./src/less/*.less')
+gulp.task('buildCss', ['cleanCss'], function () {
+    gulp.src('./src/less/main.less')
         .pipe(sourcemaps.init())
         .pipe(less())
+        .pipe(prefix())
         .pipe(minifyCss())
         .pipe(concat('main.css'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./app/css/'))
+        .pipe(sync.stream())
 })
+
 gulp.task('cleanJs', function () {
     gulp.src('./app/js/*.js')
     .pipe(clean());
 })
 
 gulp.task('buildJs', ['cleanJs'], function () {
-    gulp.src('./src/js/*.js')
-/*      .pipe(sourcemaps.init())
-        .pipe(uglify())*/
+    return gulp.src('./src/js/*.js')
+        .pipe(sourcemaps.init())
+        .pipe(uglify())
         .pipe(concat('main.js'))
-/*      .pipe(sourcemaps.write())*/
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./app/js/'))
+        .pipe(sync.stream())
 })
 
 gulp.task('watch', function () {
@@ -63,9 +69,16 @@ gulp.task('watch', function () {
         }
     });
 
+/*  gulp.watch('./src/less/*.less', ['buildCss']).on('change', sync.reload);
     gulp.watch('./src/*.html', ['buildHtml']);
     gulp.watch('./app/*.html').on('change', sync.reload);
-    gulp.watch('./src/less/*.less', ['buildCss']).on('change', sync.reload);
-    gulp.watch('./src/js/*.js', ['buildJs']).on('change', sync.reload);
+    gulp.watch('./src/js/*.js', ['buildJs']).on('change', sync.reload);*/
+
+    gulp.watch('./src/less/*.less', ['buildCss']);
+    gulp.watch('./src/*.html', ['buildHtml']);
+    gulp.watch('./src/js/*.js', ['buildJs']);
+/*    gulp.watch('./app/css/main.css').on('change', sync.stream());
+    gulp.watch('./app/*.html').on('change', sync.stream());
+    gulp.watch('./app/js/*.js').on('change', sync.stream());*/
 });
 

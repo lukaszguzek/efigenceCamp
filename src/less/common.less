@@ -1,1 +1,78 @@
-@import "variables.less";
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix { /* IE 6/7 */
+    zoom:1;
+}
+
+/* ====================================================================
+    box sizing    
+ =====================================================================*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* ====================================================================
+    overwrite bootstrap    
+ =====================================================================*/
+.row {
+    margin: 0;
+    padding: 0;
+}
+
+div[class*="col-"],
+section[class*="col-"],
+article[class*="col-"],
+blockquote[class*="col-"],
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    background-color: inherit;
+}
+
+/* ====================================================================
+    Functions    
+ =====================================================================*/
+.maxMinWidth (@max; @min: 320px; @width: 100%) {
+    max-width: @max;
+    min-width: @min;
+    width: auto;
+}
+/* ====================================================================
+    helper classes    
+ =====================================================================*/
+.noPaddingMargin {
+    padding: 0;
+    margin: 0;
+}
+
+.content-edge {
+    .noPaddingMargin;
+    max-width: 100%;
+
+    background: none;
+}
+
+.page-wrapper {
+    /* .maxMinWidth(1920px, 320px, 100%); */
+    
+    margin: 0 auto;
+    background: none;
+}
+
+.content-fluid {
+    .maxMinWidth(100%);
+
+    padding: 0 20px;
+}

@@ -1,3 +1,8 @@
+wraper - max 1920px
+wrapper = full width
+wrap-content - padding od krawędzi
+
+
 header: fluid
 	- register, sign in, login with FB
 
