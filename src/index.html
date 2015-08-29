@@ -6,51 +6,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="./css/vendor/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/vendor/icons.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
 
 </head>
 <body>
     <div class="page-wrapper">
-        <header class="container-fluid">
-            <div class="header__statusbar-wrapper">
-                    <nav class="navbar navbar-default header__statusbar">
+        <header class="container-fluid pageheader">
+            <div class="statusbar__wrapper">
+                    <nav class="navbar navbar-default statusbar__navbar">
                             <ul class="nav navbar-nav navbar-right statusbar__navbar">
-                                <li><a href="#">Zaloguj się</a></li>
-                                <li><a href="#"><span class="icon-unlocked"></span>Zaloguj się</a></li>
-                                <li><a href="#"><span class="icon-facebook3"></span>Dołącz przez FB</a></li>
+                                <li>
+                                    <a href="#" class="statusbar_menuitem">
+                                        Zaloguj się
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="statusbar_menuitem">
+                                        <span class="icon-unlocked statusbar_icon"></span>Zaloguj się
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="icon-facebook3 statusbar_icon"></span>Dołącz przez FB
+                                    </a>
+                                </li>
                             </ul>
                     </nav> <!-- login nav -->
             </div>
-            <nav class="navbar navbar-default">
-                <div class="col-md-12">
-                    <div class="col-md-4">
-                        <a class="navbar-brand" href="#"><span class="icon-location"></span>Hipster Trip</a>
-                     </div>
+            <nav class="navbar navbar-default header-main-navbar">
 
-                     <div class="col-md-4">
-                         <ul class="nav navbar-nav">
+                 <a class="navbar-brand text-logo" href="#">
+                      <span class="icon-location"></span>
+                      <span class="text-logo__bold">Hipster</span>
+                      Trip
+                  </a>
+
+                   <ul class="nav navbar-nav header__mainnav">
+                       <li><a href="#">Co to jest</a></li>
+                       <li><a href="#">Aktualności</a></li>
+                       <li><a href="#">Miejscówki</a></li>
+                       <li><a href="#">Kontakt</a></li>
+                    </ul>
+                     <form action="#" id="header-search-form" class="navbar-form navbar-right" id="test">
+                            <div class="form-group">
+                                <input type="search" class="form-control" placeholder="Szukaj..."autofocus="true">
+                            </div>
+                    </form>
+
+
+
+                <!-- <div class="header-main-navbar">
+                        <a class="navbar-brand text-logo" href="#">
+                            <span class="icon-location"></span>
+                            <span class="text-logo__bold">Hipster</span>
+                            Trip
+                        </a>
+                
+                         <ul class="nav navbar-nav header__mainnav">
                             <li><a href="#">Co to jest</a></li>
                             <li><a href="#">Aktualności</a></li>
                             <li><a href="#">Miejscówki</a></li>
                             <li><a href="#">Kontakt</a></li>
                          </ul>
-                     </div>
                     
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <form action="#" id="header-search-form" class="navbar-form navbar-right">
                             <div class="form-group">
                                 <input type="search" class="form-control" placeholder="Szukaj..."autofocus="true">
                             </div>
                         </form>
                     </div>
-                </div>
+                </div> -->
             </nav>
         </header>
 
-        <section class="container-fluid content-edge">
-            <img class="img-responsive" src="./img/video-img.jpg" alt="">
-            <!-- <video src="./video/video.mp4" autoplay loop mute preload="auto"></video> -->
-        </section>
+
+    
+    <section class="container-fluid content-edge">
+        <img class="img-responsive" src="./img/video-img.jpg" alt="">
+     <!--    <video src="./video/video.mp4" autoplay loop mute preload="auto"></video> -->
+    </section>
 
         <section class="full-width">
             <div class="content">

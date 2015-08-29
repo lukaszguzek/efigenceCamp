@@ -1,21 +1,19 @@
-.header__statusbar {
-    .clearfix;
-    @paddingVertical: 0;
-    @paddingHorizontal: @contentBasePadding;
-    width: 100%;
-    padding:  @paddingVertical @paddingHorizontal;
-
-    background-color: #276187;
-    border-radius: none;
+.container-fluid.page-header {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: @header-background-color;
+    border: none;
 }
 
-.statusbar__navbar {
-    margin: 0;
-    padding: 0;
+header.page-header {
+    background-color: red;
 }
 
-.statusbar__link {
-    padding: @contentBasePadding * 0.84 0;
-    color: @baseFontColor;
+.statusbar__wrapper {
+    padding: 0 @base-horizontal-padding;
+    background-color: inherit;
+}
 
+.navbar-default.statusbar__navbar {
+    background-color: inherit;
 }

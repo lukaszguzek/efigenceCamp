@@ -69,16 +69,17 @@ gulp.task('watch', function () {
         }
     });
 
-/*  gulp.watch('./src/less/*.less', ['buildCss']).on('change', sync.reload);
-    gulp.watch('./src/*.html', ['buildHtml']);
-    gulp.watch('./app/*.html').on('change', sync.reload);
-    gulp.watch('./src/js/*.js', ['buildJs']).on('change', sync.reload);*/
 
     gulp.watch('./src/less/*.less', ['buildCss']);
     gulp.watch('./src/*.html', ['buildHtml']);
     gulp.watch('./src/js/*.js', ['buildJs']);
-/*    gulp.watch('./app/css/main.css').on('change', sync.stream());
-    gulp.watch('./app/*.html').on('change', sync.stream());
-    gulp.watch('./app/js/*.js').on('change', sync.stream());*/
 });
+
+gulp.task('pure', function () {
+    return gulp.src('./pure/*')
+        .pipe(sourcemaps.init())
+        .pipe(concat('wynik.css'))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('.'))
+})
 
