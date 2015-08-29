@@ -1,18 +1,21 @@
-.header {
+.header__statusbar {
     .clearfix;
-
+    @paddingVertical: 0;
+    @paddingHorizontal: @contentBasePadding;
     width: 100%;
-    padding: @contentBasePadding * 0.2 @contentBasePadding;
+    padding:  @paddingVertical @paddingHorizontal;
 
     background-color: #276187;
     border-radius: none;
 }
 
-.header__navbar {
-    .clearfix;
-
-    background-color: inherit;
-    border-width: 0 0 2px 0;
-    border-color: red;
+.statusbar__navbar {
+    margin: 0;
+    padding: 0;
 }
 
+.statusbar__link {
+    padding: @contentBasePadding * 0.84 0;
+    color: @baseFontColor;
+
+}
