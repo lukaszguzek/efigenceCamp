@@ -11,75 +11,58 @@
 
 </head>
 <body>
-    <div class="page-wrapper">
-        <header class="container-fluid pageheader">
+
+    <div class="r rr"></div>
+    <div class="r rl"></div>    
+    <div class="container-fluid">
+        
+        <header class="pageheader">
             <div class="statusbar__wrapper">
-                    <nav class="navbar navbar-default statusbar__navbar">
+                    <nav class="navbar navbar-default statusbar__navbar clearfix">
                             <ul class="nav navbar-nav navbar-right statusbar__navbar">
-                                <li>
-                                    <a href="#" class="statusbar_menuitem">
-                                        Zaloguj się
+                                <li class="statusbar_menuitem">
+                                    <a href="#" class="statusbar__menulink">Zarejestruj się</a>
+                                </li>
+                                <li class="statusbar_menuitem">
+                                    <a href="#" class="statusbar__menulink">
+                                        <span class="icon-unlocked statusbar__icon"></span>Zaloguj się
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#" class="statusbar_menuitem">
-                                        <span class="icon-unlocked statusbar_icon"></span>Zaloguj się
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <span class="icon-facebook3 statusbar_icon"></span>Dołącz przez FB
+                                <li class="statusbar_menuitem">
+                                    <a href="#" class="statusbar__menulink">
+                                        <span class="icon-facebook3 statusbar__icon"></span>Dołącz przez FB
                                     </a>
                                 </li>
                             </ul>
                     </nav> <!-- login nav -->
             </div>
-            <nav class="navbar navbar-default header-main-navbar">
 
-                 <a class="navbar-brand text-logo" href="#">
-                      <span class="icon-location"></span>
-                      <span class="text-logo__bold">Hipster</span>
-                      Trip
-                  </a>
-
-                   <ul class="nav navbar-nav header__mainnav">
-                       <li><a href="#">Co to jest</a></li>
-                       <li><a href="#">Aktualności</a></li>
-                       <li><a href="#">Miejscówki</a></li>
-                       <li><a href="#">Kontakt</a></li>
+            <nav class="navbar navbar-default main-navbar">
+                <div class="main-navbar__wrapper clearfix">
+                   <ul class="nav navbar-nav main-navbar__main-nav">
+                       <li class="navbar-header qwe">
+                           <a class="navbar-brand logo__text" href="#"><span class="icon-location"></span>
+                            <span class="logo__text--bold">Hipster</span>Trip</a>
+                       </li>
+                           <li id="dupa"><a href="#" class="main-nav__link">Co to jest</a></li>
+                           <li><a href="#" class="main-nav__link">Aktualności</a></li>
+                           <li><a href="#" class="main-nav__link">Miejscówki</a></li>
+                           <li><a href="#" class="main-nav__link">Kontakt</a></li>
                     </ul>
-                     <form action="#" id="header-search-form" class="navbar-form navbar-right test">
+                     <form action="#" id="asd" class="navbar-form navbar-right searchbox__form" id="test">
                             <div class="form-group">
-                                <input type="search" class="form-control" placeholder="Szukaj..."autofocus="true">
+                                <div class="searchbox__wrapper">
+                                    <span class="icon-search searchbox__search-icon"></span>
+                                    <input type="search" class="form-control searchbox__input--dark" placeholder="Szukaj..."autofocus="true">
+                                </div>
                             </div>
                     </form>
 
-
-
-                <!-- <div class="header-main-navbar">
-                        <a class="navbar-brand text-logo" href="#">
-                            <span class="icon-location"></span>
-                            <span class="text-logo__bold">Hipster</span>
-                            Trip
-                        </a>
-                
-                         <ul class="nav navbar-nav header__mainnav">
-                            <li><a href="#">Co to jest</a></li>
-                            <li><a href="#">Aktualności</a></li>
-                            <li><a href="#">Miejscówki</a></li>
-                            <li><a href="#">Kontakt</a></li>
-                         </ul>
-                    
-                    <div class="col-md-3">
-                        <form action="#" id="header-search-form" class="navbar-form navbar-right">
-                            <div class="form-group">
-                                <input type="search" class="form-control" placeholder="Szukaj..."autofocus="true">
-                            </div>
-                        </form>
-                    </div>
-                </div> -->
+                </div>
             </nav>
+
         </header>
+
 
 
     
@@ -207,8 +190,7 @@
             </ul>
             
         </footer>
-    </div> <!-- wrap -->
-
+    </div>
     <script type="text/javascript" src="./js/vendor/jquery.js"></script>
     <script type="text/javascript" src="./js/vendor/bootstrap.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>

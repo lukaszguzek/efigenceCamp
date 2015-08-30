@@ -1,3 +1,19 @@
+.r {
+    position: absolute;
+    top: 0;
+    height: 700px;
+    border-right: 1px solid red;
+    z-index: 34;
+}
+
+.rr {
+    right: 30px;
+}
+
+.rl {
+    left: 30px;
+}
+
 .clearfix:before,
 .clearfix:after {
     content:"";
@@ -37,18 +53,16 @@ blockquote[class*="col-"],
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
+    border-right: none;
 }
 
-
-
-/* ====================================================================
-    Functions    
- =====================================================================*/
-.maxMinWidth (@max; @min: 320px; @width: 100%) {
-    max-width: @max;
-    min-width: @min;
-    width: auto;
+.navbar {
+    min-height: 1px;
+    height: auto;
+    margin-bottom: 0;
+    border-radius: 0;
 }
-/* ====================================================================
-    helper classes    
- =====================================================================*/
+
+.navbar-form .form-group {
+    display: block;
+}
