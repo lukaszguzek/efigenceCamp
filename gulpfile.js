@@ -42,7 +42,7 @@ gulp.task('buildCss', ['cleanCss'], function () {
         .pipe(concat('main.css'))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./app/css/'))
-        .pipe(sync.stream())
+        .pipe(sync.stream());
 })
 
 gulp.task('cleanJs', function () {

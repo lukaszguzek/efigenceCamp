@@ -7,6 +7,14 @@
     error: null
 };
 */
+(function playVideo () {
+    var playButton = document.getElementsByClassName('controls__play-button')[0];
+
+    playButton.addEventListener('click', function () {
+        alert('Powinienem odtworzyć video, ale tego nie zrobie!');
+    })
+})();
+
         //  options: method, url, data, async (defualt: true), requestHeader (Object), success, error
 function ajax(options) {
     'use strict';
